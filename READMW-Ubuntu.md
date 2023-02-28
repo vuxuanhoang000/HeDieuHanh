@@ -107,6 +107,7 @@ npm --version
 ```bash
 sudo apt install mysql-server -y
 mysql --version
+systemctl is-active mysql
 sudo mysql_secure_installation
 sudo mysql -u root
 ```
