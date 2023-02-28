@@ -20,7 +20,11 @@ sudo apt upgrade
 ## III. Cài đặt phần mềm
 
 ### 1. Cài đặt các phần mềm thường dùng và trình biên dịch
-
+- [Snap Store]()
+```bash
+killall snap-store
+sudo snap refresh
+```
 -   [FFMPEG Thumbnailer](https://apps.kde.org/ffmpegthumbs/)
 
 ```bash
