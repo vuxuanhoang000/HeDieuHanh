@@ -20,7 +20,7 @@ sudo apt upgrade
 ## III. Cài đặt phần mềm
 
 ### 1. Cài đặt các phần mềm thường dùng và trình biên dịch
-- [Snap Store]()
+- [Snap Store](https://snapcraft.io)
 ```bash
 killall snap-store
 sudo snap refresh
