@@ -12,10 +12,13 @@
 
 -   [Google Chrome](https://www.google.com/intl/vi/chrome/)
 -   [Microsoft Edge](https://www.microsoft.com/vi-vn/edge/download)
+- [WPS Office](https://www.wps.com/download/)
 -   [Vs Code](https://code.visualstudio.com/Download)
 -   [Git](https://git-scm.com/download/linux)
 
 ```bash
+sudo apt update && sudo apt upgrade
+sudo apt-get install git -y
 git config --global user.name "Vu Xuan Hoang"
 git config --global user.email vuxuanhoang000@gmail.com
 ```
@@ -23,17 +26,26 @@ git config --global user.email vuxuanhoang000@gmail.com
 -   [Telegram](https://desktop.telegram.org/)
 
 ```bash
-sudo apt update
+sudo apt update && sudo apt upgrade
 sudo apt install telegram-desktop -y
 ```
-
+- [OBS Studio](https://obsproject.com/download#linux)
+```bash
+sudo add-apt-repository ppa:obsproject/obs-studio
+sudo apt update
+sudo apt install ffmpeg obs-studio -y
+```
+- [VLC Media Player](https://www.videolan.org/vlc/download-ubuntu.html)
+```bash
+sudo snap install vlc
+```
 #### 2. Cài bộ gõ tiếng việt Ibus-Bamboo
 
 ```bash
 sudo add-apt-repository ppa:bamboo-engine/ibus-bamboo
 sudo apt-get update
-sudo apt-get install ibus ibus-bamboo –install-recommends
-ibus restart
+sudo apt-get install ibus ibus-bamboo -y
+sudo reboot
 ```
 
 -   Vào `Settings` -> `Keyboard` nhấn vào dấu `+` trong phần `Input Sources` như hình.
@@ -60,10 +72,6 @@ ibus restart
 
 -   Bây giờ ở trên góc trên cùng bên phải có biểu tượng để chuyển giữa `en` và `vi` thì lúc này ta đã cài `unikey` cho Ubuntu thành công. Bước tiếp theo bạn chỉ cần thay đổi bộ gõ sang `Vietnamese (Bamboo)` để sử dụng.
 
-#### 3. Cài bộ WPS Office
-
-[Tải xuống tại trang chủ](https://www.wps.com/download/)
-
 #### 4. Cài đặt Java
 
 -   Cập nhật chỉ mục gói:
@@ -81,20 +89,19 @@ java -version
 -   Nếu Java hiện chưa được cài đặt, bạn sẽ thấy đầu ra sau:
 
 ```
-Output
 Command 'java' not found, but can be installed with:
-
-sudo apt install openjdk-11-jre-headless  # version 11.0.11+9-0ubuntu2~20.04, or
-sudo apt install default-jre              # version 2:1.11-72
-sudo apt install openjdk-13-jre-headless  # version 13.0.7+5-0ubuntu1~20.04
-sudo apt install openjdk-16-jre-headless  # version 16.0.1+9-1~20.04
-sudo apt install openjdk-8-jre-headless   # version 8u292-b10-0ubuntu1~20.04
+sudo apt install openjdk-11-jre-headless  # version 11.0.18+10-0ubuntu1~22.04, or
+sudo apt install default-jre              # version 2:1.11-72build2
+sudo apt install openjdk-17-jre-headless  # version 17.0.6+10-0ubuntu1~22.04
+sudo apt install openjdk-18-jre-headless  # version 18.0.2+9-2~22.04
+sudo apt install openjdk-19-jre-headless  # version 19.0.2+7-0ubuntu3~22.04
+sudo apt install openjdk-8-jre-headless   # version 8u362-ga-0ubuntu1~22.04
 ```
 
 -   Thực hiện lệnh sau để cài đặt Java Runtime Environment (JRE) mặc định, sẽ cài đặt JRE từ OpenJDK 11:
 
 ```bash
-sudo apt install default-jre
+sudo apt install openjdk-17-jre-headless -y
 ```
 
 -   JRE sẽ cho phép bạn chạy hầu hết các phần mềm Java.
@@ -107,16 +114,15 @@ java -version
 -   Bạn sẽ thấy đầu ra tương tự như sau:
 
 ```bash
-Output
-openjdk version "11.0.11" 2021-04-20
-OpenJDK Runtime Environment (build 11.0.11+9-Ubuntu-0ubuntu2.20.04)
-OpenJDK 64-Bit Server VM (build 11.0.11+9-Ubuntu-0ubuntu2.20.04, mixed mode, sharing)
+openjdk version "17.0.6" 2023-01-17
+OpenJDK Runtime Environment (build 17.0.6+10-Ubuntu-0ubuntu122.04)
+OpenJDK 64-Bit Server VM (build 17.0.6+10-Ubuntu-0ubuntu122.04, mixed mode, sharing)
 ```
 
 -   Bạn có thể cần Bộ công cụ phát triển Java (JDK) ngoài JRE để biên dịch và chạy một số phần mềm dựa trên Java cụ thể. Để cài đặt JDK, hãy thực hiện lệnh sau, lệnh này cũng sẽ cài đặt JRE:
 
 ```bash
-sudo apt install default-jdk
+sudo apt install openjdk-17-jdk-headless -y
 ```
 
 -   Xác minh rằng JDK đã được cài đặt bằng cách kiểm tra phiên bản của javac, trình biên dịch Java:
@@ -128,8 +134,12 @@ javac -version
 -   Bạn sẽ thấy đầu ra sau:
 
 ```bash
-Output
-javac 11.0.11
+javac 17.0.6
 ```
 
 #### 5. Cài đặt Python
+```bash
+sudo apt install python3 -y
+sudo apt install python3-pip -y
+sudo apt install python3-venv -y
+```
