@@ -117,15 +117,17 @@ exit;
 ```
 ```bash
 sudo mysql -u root --password=123
-systemctl status mysql.service
 ```
 
 ```sql
 show databases;
 create database testDB;
 show database;
+exit;
 ```
-
+```bash
+systemctl status mysql.service
+```
 ### 2. Cài bộ gõ tiếng việt Ibus-Unikey
 
 ```bash
