@@ -108,13 +108,21 @@ npm --version
 sudo apt install mysql-server -y
 mysql --version
 systemctl is-active mysql
-sudo mysql_secure_installation
-sudo mysql -u root
+sudo mysql
+```
+```sql
+UNINSTALL COMPONENT 'file://component_validate_password';
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '123';
+exit;
+```
+```bash
+sudo mysql -u root --password=123
+systemctl status mysql.service
 ```
 
 ```sql
 show databases;
-create database first-mysql-database;
+create database testDB;
 show database;
 ```
 
