@@ -32,9 +32,9 @@
 - [Telegram](https://desktop.telegram.org/)
 ### 5. Office
 - [Office 2021 Setup + Active](software/Office2021.zip)
--- [Nguồn Crack Office](https://msguides.com/office-2021)
--- [Office Customization Tool](https://config.office.com/deploymentsettings)
--- [Office Deployment Tool](https://www.microsoft.com/en-us/download/details.aspx)
+- [Nguồn Crack Office](https://msguides.com/office-2021)
+- [Office Customization Tool](https://config.office.com/deploymentsettings)
+- [Office Deployment Tool](https://www.microsoft.com/en-us/download/details.aspx)
 ### 6. Tiện ích Microsoft Store
 - [RecForth](https://www.microsoft.com/store/productId/9P03BZ82L9F2)
 - [Pichon](https://www.microsoft.com/store/productId/9NK8T1KSHFFR)
