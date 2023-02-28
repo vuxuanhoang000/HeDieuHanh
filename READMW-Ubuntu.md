@@ -102,7 +102,7 @@ node --version
 npm --version
 ```
 
--   [MySql]()
+-   [MySql](https://www.mysql.com/)
 
 ```bash
 sudo apt install mysql-server -y
