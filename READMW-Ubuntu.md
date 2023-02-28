@@ -6,14 +6,38 @@
 
 ## II. Cài đặt drivers
 
+```bash
+sudo ubuntu-drivers autoinstall
+sudo apt update
+sudo apt upgrade
+```
+
+### Cài đặt NVIDIA Driver
+
+-   [CUDA Toolkit](https://developer.nvidia.com/cuda-downloads)
+-   [NVIDIA cuDNN](https://developer.nvidia.com/rdp/cudnn-archive)
+
 ## III. Cài đặt phần mềm
 
-#### 1. Cài đặt các phần mềm .deb
+### 1. Cài đặt các phần mềm thường dùng và trình biên dịch
+
+-   [FFMPEG Thumbnailer](https://apps.kde.org/ffmpegthumbs/)
+
+```bash
+sudo apt install ffmpegthumbnailer -y
+sudo apt update
+sudo rm /usr/share/thumbnailers/totem.thumbnailer
+```
 
 -   [Google Chrome](https://www.google.com/intl/vi/chrome/)
 -   [Microsoft Edge](https://www.microsoft.com/vi-vn/edge/download)
-- [WPS Office](https://www.wps.com/download/)
+-   [WPS Office](https://www.wps.com/download/)
 -   [Vs Code](https://code.visualstudio.com/Download)
+
+```bash
+wget -qO- https://raw.githubusercontent.com/cra0zy/code-nautilus/master/install.sh | bash
+```
+
 -   [Git](https://git-scm.com/download/linux)
 
 ```bash
@@ -29,22 +53,74 @@ git config --global user.email vuxuanhoang000@gmail.com
 sudo apt update && sudo apt upgrade
 sudo apt install telegram-desktop -y
 ```
-- [OBS Studio](https://obsproject.com/download#linux)
+
+-   [OBS Studio](https://obsproject.com/download#linux)
+
 ```bash
 sudo add-apt-repository ppa:obsproject/obs-studio
 sudo apt update
 sudo apt install ffmpeg obs-studio -y
 ```
-- [VLC Media Player](https://www.videolan.org/vlc/download-ubuntu.html)
+
+-   [VLC Media Player](https://www.videolan.org/vlc/download-ubuntu.html)
+
 ```bash
 sudo snap install vlc
 ```
-#### 2. Cài bộ gõ tiếng việt Ibus-Bamboo
+
+-   [GCC & G++](https://sourceforge.net/projects/mingw-w64/files/)
 
 ```bash
-sudo add-apt-repository ppa:bamboo-engine/ibus-bamboo
-sudo apt-get update
-sudo apt-get install ibus ibus-bamboo -y
+sudo apt install build-essential -y
+```
+
+-   [Java](https://www.oracle.com/vn/java/technologies/downloads/)
+
+```bash
+sudo apt install openjdk-17-jre-headless -y
+sudo apt install openjdk-17-jdk-headless -y
+java -version
+javac -version
+```
+
+-   [Python](https://www.python.org/downloads/)
+
+```bash
+sudo apt install python3 -y
+sudo apt install python3-pip -y
+sudo apt install python3-venv -y
+```
+
+-   [NodeJs](https://nodejs.org/)
+
+```bash
+sudo apt install curl -y
+curl -sL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+sudo apt update
+sudo apt install nodejs -y
+node --version
+npm --version
+```
+
+-   [MySql]()
+
+```bash
+sudo apt install mysql-server -y
+mysql --version
+sudo mysql_secure_installation
+sudo mysql -u root
+```
+
+```sql
+show databases;
+create database first-mysql-database;
+show database;
+```
+
+### 2. Cài bộ gõ tiếng việt Ibus-Unikey
+
+```bash
+sudo apt-get install ibus-unikey -y
 sudo reboot
 ```
 
@@ -56,11 +132,11 @@ sudo reboot
 
 ![2](imgs/cai-go-tieng-viet-ubuntu-2.webp)
 
--   Chọn vào mục `Vietnamese (Bamboo)` rồi nhấn `Add` để thêm bộ gõ tiếng Việt cho Ubuntu.
+-   Chọn vào mục `Vietnamese (Unikey)` rồi nhấn `Add` để thêm bộ gõ tiếng Việt cho Ubuntu.
 
 ![3](imgs/cai-go-tieng-viet-ubuntu-3.webp)
 
--   Nếu bạn không tìm thấy `Vietnamese (Bamboo)` trong danh sách thì hãy khởi động lại máy tính và thử lại.
+-   Nếu bạn không tìm thấy `Vietnamese (Unikey)` trong danh sách thì hãy khởi động lại máy tính và thử lại.
 
 -   Tiếp theo nhấn chọn vào `Show Applications` và chạy ứng dụng `Language Support`.
 
@@ -70,76 +146,4 @@ sudo reboot
 
 ![5](imgs/cai-go-tieng-viet-ubuntu-5.webp)
 
--   Bây giờ ở trên góc trên cùng bên phải có biểu tượng để chuyển giữa `en` và `vi` thì lúc này ta đã cài `unikey` cho Ubuntu thành công. Bước tiếp theo bạn chỉ cần thay đổi bộ gõ sang `Vietnamese (Bamboo)` để sử dụng.
-
-#### 4. Cài đặt Java
-
--   Cập nhật chỉ mục gói:
-
-```bash
-sudo apt update
-```
-
--   Tiếp theo, kiểm tra xem Java đã được cài đặt chưa:
-
-```bash
-java -version
-```
-
--   Nếu Java hiện chưa được cài đặt, bạn sẽ thấy đầu ra sau:
-
-```
-Command 'java' not found, but can be installed with:
-sudo apt install openjdk-11-jre-headless  # version 11.0.18+10-0ubuntu1~22.04, or
-sudo apt install default-jre              # version 2:1.11-72build2
-sudo apt install openjdk-17-jre-headless  # version 17.0.6+10-0ubuntu1~22.04
-sudo apt install openjdk-18-jre-headless  # version 18.0.2+9-2~22.04
-sudo apt install openjdk-19-jre-headless  # version 19.0.2+7-0ubuntu3~22.04
-sudo apt install openjdk-8-jre-headless   # version 8u362-ga-0ubuntu1~22.04
-```
-
--   Thực hiện lệnh sau để cài đặt Java Runtime Environment (JRE) mặc định, sẽ cài đặt JRE từ OpenJDK 11:
-
-```bash
-sudo apt install openjdk-17-jre-headless -y
-```
-
--   JRE sẽ cho phép bạn chạy hầu hết các phần mềm Java.
--   Xác minh cài đặt với:
-
-```bash
-java -version
-```
-
--   Bạn sẽ thấy đầu ra tương tự như sau:
-
-```bash
-openjdk version "17.0.6" 2023-01-17
-OpenJDK Runtime Environment (build 17.0.6+10-Ubuntu-0ubuntu122.04)
-OpenJDK 64-Bit Server VM (build 17.0.6+10-Ubuntu-0ubuntu122.04, mixed mode, sharing)
-```
-
--   Bạn có thể cần Bộ công cụ phát triển Java (JDK) ngoài JRE để biên dịch và chạy một số phần mềm dựa trên Java cụ thể. Để cài đặt JDK, hãy thực hiện lệnh sau, lệnh này cũng sẽ cài đặt JRE:
-
-```bash
-sudo apt install openjdk-17-jdk-headless -y
-```
-
--   Xác minh rằng JDK đã được cài đặt bằng cách kiểm tra phiên bản của javac, trình biên dịch Java:
-
-```bash
-javac -version
-```
-
--   Bạn sẽ thấy đầu ra sau:
-
-```bash
-javac 17.0.6
-```
-
-#### 5. Cài đặt Python
-```bash
-sudo apt install python3 -y
-sudo apt install python3-pip -y
-sudo apt install python3-venv -y
-```
+-   Bây giờ ở trên góc trên cùng bên phải có biểu tượng để chuyển giữa `en` và `vi` thì lúc này ta đã cài `unikey` cho Ubuntu thành công. Bước tiếp theo bạn chỉ cần thay đổi bộ gõ sang `Vietnamese (Unikey)` để sử dụng.
