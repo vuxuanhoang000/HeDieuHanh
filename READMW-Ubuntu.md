@@ -20,11 +20,14 @@ sudo apt upgrade
 ## III. Cài đặt phần mềm
 
 ### 1. Cài đặt các phần mềm thường dùng và trình biên dịch
-- [Snap Store](https://snapcraft.io)
+
+-   [Snap Store](https://snapcraft.io)
+
 ```bash
 killall snap-store
 sudo snap refresh
 ```
+
 -   [FFMPEG Thumbnailer](https://apps.kde.org/ffmpegthumbs/)
 
 ```bash
@@ -114,11 +117,13 @@ mysql --version
 systemctl is-active mysql
 sudo mysql
 ```
+
 ```sql
 UNINSTALL COMPONENT 'file://component_validate_password';
 ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '123';
 exit;
 ```
+
 ```bash
 sudo mysql -u root --password=123
 ```
@@ -129,9 +134,11 @@ create database testDB;
 show database;
 exit;
 ```
+
 ```bash
 systemctl status mysql.service
 ```
+
 ### 2. Cài bộ gõ tiếng việt Ibus-Unikey
 
 ```bash
