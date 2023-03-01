@@ -39,6 +39,15 @@ sudo rm /usr/share/thumbnailers/totem.thumbnailer
 -   [Google Chrome](https://www.google.com/intl/vi/chrome/)
 -   [Microsoft Edge](https://www.microsoft.com/vi-vn/edge/download)
 -   [WPS Office](https://www.wps.com/download/)
+
+```bash
+git clone https://github.com/IamDH4/ttf-wps-fonts.git
+cd ttf-wps-fonts
+sudo sh install.sh
+cd ..
+rm -rf ttf-wps-fonts
+```
+
 -   [Vs Code](https://code.visualstudio.com/Download)
 
 ```bash
