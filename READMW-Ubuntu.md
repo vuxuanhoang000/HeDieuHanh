@@ -131,7 +131,7 @@ sudo mysql -u root --password=123
 ```sql
 show databases;
 create database testDB;
-show database;
+show databases;
 exit;
 ```
 
