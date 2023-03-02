@@ -41,6 +41,7 @@ sudo rm /usr/share/thumbnailers/totem.thumbnailer
 - [WPS Office](https://www.wps.com/download/)
 
 ```bash
+sudo snap install wps-2019-snap
 git clone https://github.com/IamDH4/ttf-wps-fonts.git
 cd ttf-wps-fonts
 sudo sh install.sh
@@ -184,11 +185,13 @@ Exec=xdotool key --clearmodifiers Super+d
 
 ![add showdesktop favorite](imgs/add-showdesktop-favorite.png)
 
-### 3. Cài bộ gõ tiếng việt Ibus-Unikey
+### 3. Cài bộ gõ tiếng việt Ibus-Bamboo
 
 ```bash
-sudo apt-get install ibus-unikey -y
-sudo reboot
+sudo add-apt-repository ppa:bamboo-engine/ibus-bamboo
+sudo apt-get update
+sudo apt-get install ibus-bamboo
+ibus restart
 ```
 
 - Vào `Settings` -> `Keyboard` nhấn vào dấu `+` trong phần `Input Sources` như hình.
