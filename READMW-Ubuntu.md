@@ -107,6 +107,21 @@ sudo apt install python3-pip -y
 sudo apt install python3-venv -y
 ```
 
+or
+
+```bash
+sudo apt update
+sudo apt install build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev libsqlite3-dev wget libbz2-dev -y
+cd ~/Downloads
+wget https://www.python.org/ftp/python/3.10.10/Python-3.10.10.tgz
+tar -xf Python-3.10.10.tgz
+cd Python-3.10.10
+./configure --enable-optimizations
+make -j 12 # hãy sửa đổi -j để tương ứng với số lượng lõi trong bộ xử lý của bạn. Bạn có thể tìm số bằng cách gõ nproc.
+sudo make altinstall
+python3.10 --version
+```
+
 -   [NodeJs](https://nodejs.org/)
 
 ```bash
