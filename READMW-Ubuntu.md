@@ -14,7 +14,7 @@ sudo apt upgrade
 
 ### Cài đặt NVIDIA Driver
 
-- [CUDA Toolkit](https://developer.nvidia.com/cuda-downloads)
+- [CUDA Toolkit]([https://developer.nvidia.com/cuda-downloads](https://developer.nvidia.com/cuda-11-8-0-download-archive?target_os=Linux&target_arch=x86_64&Distribution=Ubuntu&target_version=22.04&target_type=runfile_local))
 - [NVIDIA cuDNN](https://developer.nvidia.com/rdp/cudnn-archive)
 
 ## III. Cài đặt phần mềm
